@@ -1,0 +1,280 @@
+@viewport {
+	width: 100vw ; min-zoom: 100%
+}
+
+header {
+	margin-top: 0px;
+	color: #fff;
+	height: 120px;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.205);
+	background-color: white;
+}
+
+label{
+	margin: 0 40px 0 0;
+	font-size: 26px;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+	float: right;
+	color: black;
+}
+
+#toggle{
+	display: none;
+}
+
+.icon {
+	float: left;
+	height: 120px;
+}
+
+.logo {
+	width: 140px;
+	height: auto;
+	padding: 0px 0px;
+	z-index: 70;
+	position: relative;
+}
+
+.navbar ul {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.navbar ul li {
+	display: inline;
+	padding: 15px;
+	margin: 10px;
+	line-height: 110px;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: #000;
+	opacity: 0.8;
+	transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+	opacity: 1;
+	text-shadow: 0 0 20px #ff5757;
+
+	transition: all 0.5s;
+
+	text-shadow: 0 0 20px #ff5757;
+}
+
+@media only screen and (max-width: 900px){
+	label{
+		display: block;
+		cursor: pointer;
+	}
+	.icon{
+		width: 80%;
+		height: auto;
+	}
+	.navbar{
+			background-color: #fff;
+			position: relative;
+			z-index: 69;
+			padding-bottom: 25px;
+	}
+
+	.navbar ul li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+	.menu{
+		display: flex;
+		justify-content: center;
+		margin: 0 30px 0 0;
+		text-align: center;
+		align-items: center;
+		width: 100%;
+		display: none;
+
+	}
+
+	/* .menu li:first-child{
+		padding-top: 100px;
+	} */
+
+	.menu a{
+		display: block;
+		/* border-bottom: 1px solid #EAEAEB; */
+		margin: 10;
+		height: 0;
+		line-height: 10px;
+		/* margin-left: 40px; */
+		/* float: right; */
+
+	}
+
+	#toggle:checked + .menu{
+		display: block;
+	}
+
+	footer{
+        display: flex;
+        flex-direction: column;
+		
+    }
+    .footer-content{
+		display: flex;
+        flex-direction: column;
+    }
+    .footer-section{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .footer-section li{
+        display: flex;
+        margin-bottom: 10px;
+    }
+		/* .copyright{
+			display: none;
+		} */
+
+
+}
+
+@media only screen and (max-width: 1300px){
+	.footer .footer-content .footer-section {
+		padding: 10px;
+	}
+
+}
+
+footer {
+	color: #000;
+	/* height: 400px; */
+	position: relative;
+	
+}
+
+.contact-input {
+	/* background: #fff; */
+  	margin-top: -15px;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid gray;
+	color: white;
+}
+
+.contact-input:focus-visible {
+  outline: none;
+}
+
+
+.copyright {
+	color: #000;
+	opacity: 1;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	bottom: 0px;
+	left: 0px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	background-color: #5e6668;
+}
+
+footer .footer-content {
+	border: 1px;
+	display: flex;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #d49c6b;
+	color: white;
+}
+
+footer .footer-content .footer-section {
+	flex: 1;
+	padding: 10px;
+	width: 100%;
+	background-color: #d49c6b;
+	color: white;
+}
+
+.btn-big {
+	display: block;
+	border: 0;
+	font-size: 16px;
+	padding: 16px 30px;
+	border-radius: 30px;
+	background: #ff5757;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+
+.btn-big:hover {
+	background: #ff8c8c;
+}
+
+.btn-big:focus {
+	background: #000;
+}
+
+/* .footer .copyright2{
+	display: none;
+}
+
+footer .copyright2 p{
+	text-align: center;
+	opacity: 1;
+	background-color: #5e6668;
+	padding: 10px;
+	margin: 0;
+} */
+
+.socials a {
+
+	color: white;
+	opacity: 0.8;
+	width: 45px;
+	height: 41px;
+	padding-top: 5px;
+	/* margin-right: 5px; */
+	text-align: center;
+	display: inline-block;
+	font-size: 1.3em;
+	border-radius: 5px;
+}
+
+footer .footer-content .footer-section .socials a:hover {
+
+	color: #ff8c8c;
+	transition: all .5s;
+}
+
+footer .footer-content .footer-section ul li a {
+	margin-bottom: 10px;
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	opacity: 0.8;
+	transition: 0.5s;
+}
+footer .footer-content .footer-section ul li a:hover {
+	color: black;
+	margin-left: 15px;
+	transition: all 0.3s;
+	opacity: 1;
+	text-shadow: 0 0 20px #ff5757;
+}
+
+footer .footer-content .footer-section ul li {
+	text-decoration: none;
+}

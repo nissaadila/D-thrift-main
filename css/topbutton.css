@@ -1,0 +1,24 @@
+/* To Top */
+#myBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #f85c5f;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+#myBtn:hover{
+    background-color: red;
+}
+@media (prefers-reduced-motion: no-preference){
+    html{
+        scroll-behavior: smooth;
+    }
+}

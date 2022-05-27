@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="productdetail.css">
+  <link rel="stylesheet" href="css/topbutton.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="myProduct.js">
+  <link rel="icon" href="img/D'THRIFT.jpg" type="image/x-icon">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+    </svg>
+  </button>
+  <header id="h">
+    <div class="header">
+      <div class="logo">
+        <ul>
+          <li><a href="Home.html">
+            <img class="icon" src="img/D'THRIFT.jpg" />
+          </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar">
+  
+        <ul>
+          <label for="toggle">&#9776;</label>
+          <input type="checkbox" id="toggle"/>
+          <div class="menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="NewAbout.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="login.html">Account</a></li>
+          </div>
+  
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-body-detail">
+    <div class="konten-detail">
+      <div class="left-body">
+        <div id="wrapper">
+            <img id="featured" src="https://cdn.discordapp.com/attachments/843073940247019520/843076273054941204/13.png">
+        </div>
+        
+        <div id="slider">
+            <img class="thumbnail active" src="https://cdn.discordapp.com/attachments/843073940247019520/843076273054941204/13.png">
+            <img class="thumbnail" src="https://cdn.discordapp.com/attachments/843073940247019520/843076305439948830/14.png">
+            <img class="thumbnail" src="https://cdn.discordapp.com/attachments/843073940247019520/843076294409191454/16.png">
+            <img class="thumbnail" src="https://cdn.discordapp.com/attachments/843073940247019520/843076278428762112/15.png">
+        </div>
+
+        <script type="text/javascript">
+          let thumb = document.getElementsByClassName('thumbnail')
+          let aktif = document.getElementsByClassName('active')
+          let kiri = document.getElementById('left')
+          let kanan = document.getElementById('right')
+
+          for(let i = 0; i < thumb.length; i++){
+            thumb[i].addEventListener('mouseover', act)
+
+            function act(){
+              if(aktif.length > 0){
+                aktif[0].classList.remove('active')
+              }
+              this.classList.add('active')
+              document.getElementById('featured').src = this.src
+            }
+          }
+
+        </script>
+      </div>
+      
+      <div class="right-body">
+        <div id = "kanan">
+          <h1>Casual block Shoest</h1>
+          <h3>$15</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+    
+          <div class="forms">
+            <form>
+              <h4>Size</h4>
+              <select name="Size" id="sizing">
+                <option value="Default">Choose an option</option>
+                <option value="XXS">Size XXS</option>
+                <option value="XS">Size XS</option>
+                <option value="S">Size S</option>
+                <option value="M">Size M</option>
+                <option value="L">Size L</option>
+                <option value="XL">Size XL</option>
+                <option value="XXL">Size XXL</option>
+              </select>
+            </form>
+          </div>
+    
+          <div class="forms">
+            <form>
+              <h4>Color</h4>
+              <select name="Color" id="colors">
+                <option value="Default">Choose an option</option>
+                <option value="Grey">Grey</option>
+                <option value="Red">Red</option>
+                <option value="Pink">Pink</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+                <option value="Brown">Brown</option>
+              </select>
+            </form>
+          </div>
+    
+          <div id="counter"></div>
+          <div id="Chart">
+            <p  class="fa fa-times close" onclick="closeChart()"></p>
+            <table>
+              <tr>
+                <th></th>
+                <th scope="col">Length</th>
+                <th scope="col">Width</th>
+              </tr>
+              <tr>
+                <th scope="row">S</th>
+                <td>71 CM</td>
+                <td>47 CM</td>
+              </tr>
+              <tr>
+                <th scope="row">M</th>
+                <td>73 CM</td>
+                <td>49 CM</td>
+              </tr>
+              <tr>
+                <th scope="row">L</th>
+                <td>75 CM</td>
+                <td>51 CM</td>
+              </tr>
+              <tr>
+                <th scope="row">XL</th>
+                <td>77 CM</td>
+                <td>53 CM</td>
+              </tr>
+              <tr>
+                <th scope="row">XXL</th>
+                <td>79 CM</td>
+                <td>55 CM</td>
+              </tr>
+            </table>
+          </div>
+          <p id="sizeChart" onclick="openChart()"><span class="fa fa-bar-chart"></span> Size Chart</p>
+          <div id="btn">
+            <button id="status" onclick="submitStatus()">Add To Cart</button>
+            <button id="fav" onclick="like()"><span class="fa fa-heart"></span> Add to wishlist</button>
+          </div>
+          <p class="bawah">SKU : 12-PMF | Categories : Men</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="Related">
+    <div class="relatedProduct">
+      <h3>Related Products:</h3>
+
+      <div id="konteiner">
+        <i id="slideLeft" class="fa fa-angle-left left"></i>
+
+        <div id="card">
+            <a href="product2.html">
+                <div class="isi">
+                  <img src="https://cdn.discordapp.com/attachments/843073940247019520/843076198866485268/11.png" alt="LXX Suit">
+                  <div class="info">
+                    <h4>LXX Suit</h4>
+                    <p>$100</p>
+                  </div>
+                </div>
+            </a>
+  
+          <a href="product1.html">
+            <div class="isi">
+              <img src="https://cdn.discordapp.com/attachments/843073940247019520/843075616660389908/1.1.png" alt="Printed Stretch Jumpsuit">
+              <div class="info">
+                <h4>Printed Stretch Jumpsuit</h4>
+                <p>$50</p>
+              </div>
+            </div>
+          </a>
+  
+          <a href="product3.html">
+            <div class="isi">
+              <img src="https://cdn.discordapp.com/attachments/843073940247019520/843076219812577340/5.png" alt="Da Floral Jumpsuit">
+              <div class="info">
+                <h4>Da Floral Jumpsuit</h4>
+                <p>$55</p>
+              </div>
+            </div>
+          </a>
+  
+          <a href="product5.html">
+            <div class="isi">
+              <img src="https://cdn.discordapp.com/attachments/843073940247019520/843076343658053642/19.png" alt="Blue da Floral Bag">
+              <div class="info">
+                <h4>Blue da Floral Bag</h4>
+                <p>$25</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="product6.html">
+            <div class="isi">
+              <img src="https://cdn.discordapp.com/attachments/843073940247019520/843076414747574272/27.png" alt="DY Denim Jacket">
+              <div class="info">
+                <h4>DY Denim Jacket</h4>
+                <p>$23</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <i id="slideRight" class="fa fa-angle-right right"></i>
+        
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+  <script type="text/babel">
+    class ProductCount extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = { count: 1 };
+      }
+      plusProduct() {
+        this.setState({ count: this.state.count + 1 });
+      }
+      minusProduct() {
+        if (this.state.count == 1) {
+          count: 1;
+        } else {
+          this.setState({ count: this.state.count - 1 });
+        }
+      }
+      render() {
+        return (
+          <div>
+            <h2>
+              Quantity: {this.state.count}
+            </h2>
+            <button onClick={() => { this.minusProduct() }}>-</button>
+            <button onClick={() => { this.plusProduct() }}>+</button>
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(<ProductCount />, document.getElementById('counter'));
+
+    function submitStatus() {
+        let ukuran = document.getElementById('sizing');
+        let warna = document.getElementById('colors');
+        if(ukuran.value === 'Default'){
+            alert('Choose Size!');
+            return false;
+        }
+        if(warna.value === 'Default'){
+            alert('Choose Color!');
+            return false;
+        }
+        alert("Added to Cart");
+    }
+
+    function openChart(){
+      document.getElementById('Chart').style.width = '40%';
+      document.getElementById('Chart').style.border = '2px solid #d49c6b';
+    }
+
+    function closeChart(){
+      document.getElementById('Chart').style.width = 0;
+      document.getElementById('Chart').style.border = 'none';
+    }
+
+    function like(){
+      alert('Added to wishlist!');
+    }
+
+    let buttonLeft = document.getElementById('slideLeft')
+    let buttonRight = document.getElementById('slideRight')
+
+    buttonLeft.addEventListener('click', function(){
+      document.getElementById('card').scrollLeft -= 50
+    })
+
+    buttonRight.addEventListener('click', function(){
+      document.getElementById('card').scrollLeft += 50
+    })
+  </script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section getintouch">
+        <h3>GET IN TOUCH</h3>
+        <p>isi description...</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-snapchat"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section categories">
+        <h3>CATEGORIES</h3>
+        <!-- <br /> -->
+        <ul>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section link">
+        <h3>LINK</h3>
+        <!-- <br /> -->
+        <ul>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section help">
+        <h3>HELP</h3>
+        <!-- <br /> -->
+        <ul>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shippings</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>NEWSLETTER</h3>
+        <form action="#" method="post">
+          <input
+            class="text-input contact-input"
+            type="email"
+            name="email"
+            placeholder="email@example.com"
+          />
+
+          <button type="submit" name="button" class="btn btn-big">
+            Subscribe
+          </button>
+        </form>
+
+      </div>
+      <!--copyright kedua  -->
+      <div class="footer-section copyright2">
+        <p>Copyright - Kelompok 5</p>
+      </div>
+    </div>
+    <!-- copyright pertama -->
+    <div class="copyright">
+      <p>Copyright - Kelompok 5</p>
+    </div>
+  </footer>
+</body>
+
+<script src="js/topbutton.js"></script>
+
+
+</html>

@@ -1,0 +1,277 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+#h{
+    height: 170px;
+    padding-top: 10px;
+}
+
+.header ul{
+    margin: 0 0 10px;
+    padding: 0 0 0 40px;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.header .navbar a{
+    font-weight: 500;
+}
+
+.header .navbar{
+    margin: 0 0 20px;
+}
+
+.header .navbar label{
+    padding-top: 21px;
+    padding-right: 1px;
+    transform: scale(1.063,1);
+}
+
+.header ul{
+	list-style-type:none;
+}
+
+.icon{
+    margin-top: 10px;
+}
+
+.menu{
+    padding-top: 21px;
+}
+
+.menu .link{
+    margin-left: 0;
+    position: relative;
+    left: -5px;
+}
+
+footer{
+    margin-bottom: 10px;
+    position: relative;
+    top: 150px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+footer p{
+    margin: 0 0 10px;
+    color: white;
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+footer ul{
+    padding: 0 0 0 40px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+footer .socials .fab{
+    font-size: 18px;
+    width: 100%;
+}
+
+footer input{
+    font-weight: 500;
+}
+
+footer .copyright p{
+    width: 100%;
+}
+
+@media(max-width: 900px) {
+    #h{
+        height: auto;
+        padding-bottom: 20px;
+    }
+}
+
+
+.account-welcome{
+    margin-top: 80px;
+    justify-content: center;
+    display: flex;
+}
+
+.account-welcome h1{
+    font-size: 3vw;
+    overflow: hidden;
+    border-right: .10em solid red;
+    white-space: nowrap;
+    margin: 10vw 10vw;
+    letter-spacing: .10em;
+    animation:typing 5s steps(30, end), blink .5s infinite;
+}
+
+@keyframes typing{
+    from {width: 0;}
+    to {width: 45%;}
+}
+
+@keyframes blink{
+    50% {border-color: transparent}
+  }
+
+.login-form{
+	margin: 100px;
+}
+
+#account{
+    text-align: center;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #f6fafb;
+}
+
+.login-form form{
+    background-color: #4a5253;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 60px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.login-form .item{
+	border-radius: 20px;
+    margin-bottom: 5px;
+    padding: 1vw 5vw;
+}
+
+.login-form .item:hover{
+    padding: 1vw 7vw;
+    background-color: #dddddd;
+}
+
+.form-login{
+    text-align: center;
+}
+
+
+#login{
+    margin-top: 50px;
+    border-radius: 30px;
+    background-color: #f6fafb;
+    outline: none;
+    border: none;
+    color: #252b31;
+    padding: 10px 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px #999;
+}
+
+#login:hover{
+    background-color: #e8eced;
+}
+
+#login:active{
+    background-color: #d5dadb;
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+}
+
+.form-query p{
+    font-weight: bold;
+    font-size: 20px;
+    color: #f6fafb;
+}
+
+.form-query{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.socialMedia a{
+    margin: 10px;
+    font-size: 30px;
+    background-color: white;
+    padding: 2px 7px;
+    border-radius: 12px;
+}
+
+.socialMedia a:hover{
+    opacity: 0.7;
+}
+
+.socialMedia .fa-facebook{
+    color: #3B5998;
+}
+
+.socialMedia .fa-instagram{
+    color: #125688;
+}
+
+.socialMedia .fa-pinterest{
+    color: #cb2027;
+}
+
+.socialMedia .fa-snapchat{
+    color: #fffc00;
+}
+
+.socialMedia .fa-youtube{
+    color: #bb0000;
+}
+
+.account-socials{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.account-socials h5{
+    font-size: 20px;
+    font-weight: bold;
+    color: #f6fafb;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 580px) {
+    .login-form{
+        margin: 20px;
+    }
+    .login-form form{
+        padding: 10px 10px;
+    }
+    .account-socials{
+        margin-top: 40px;
+    }
+    .account-socials h5{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .socialMedia a{
+        margin: 2px;
+        font-size: 20px;
+    }
+    .form-query{
+        margin-top: 15px;
+    }
+    .form-query p{
+        font-size: 10px;
+    }
+    #login{
+        margin-top: 20px;
+        padding: 5px 25px;
+        box-shadow: 0 9px #999;
+        font-size: 7px;
+    }
+}
+
+.account-check{
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+}
+

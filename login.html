@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account</title>
+    <link rel="stylesheet" href="login.css">
+    <link
+			href="https://fonts.googleapis.com/css?family=Poppins"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="nav.css" />
+</head>
+<body>
+    <div class="header" id="h">
+        <div class="logo">
+            <ul>
+                <li><a href="Home.html">
+        <img class="icon" src="https://cdn.discordapp.com/attachments/843073940247019520/854377095219904562/DTHRIFT.jpg" />
+      </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar">
+
+            <ul>
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <div class="menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="NewAbout.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="login.html">Account</a></li>
+                </div>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- react aplication -->
+    <div class="account-welcome">
+        <h1>Hello, Please log in first...</h1>
+    </div>
+
+    <div class="login-form">
+        <form id="accountform">
+            <h3 id="account">LOG IN</h3>
+            <div class="form-query">
+                <p>Username</p>
+                <input type="text" class="form-control item" id="acc-uname" placeholder="Username" required minlength="5" maxlength="15">
+            </div>
+            <div class="form-query">
+                <p>password</p>
+                <input type="password" class="form-control item" id="acc-pw" placeholder="Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number.">
+            </div>
+            <div class="form-login">
+                <button type="submit" id="login" value="Submit">Log in</button>
+            </div>
+            <div class="account-socials">
+                <h5>or login with Social Media</h5>
+                <div class="socialMedia">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-snapchat"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section getintouch">
+                <h3>GET IN TOUCH</h3>
+                <p>isi description...</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-snapchat"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section categories">
+                <h3>CATEGORIES</h3>
+                <!-- <br /> -->
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section link">
+                <h3>LINK</h3>
+                <!-- <br /> -->
+                <ul>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section help">
+                <h3>HELP</h3>
+                <!-- <br /> -->
+                <ul>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shippings</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h3>NEWSLETTER</h3>
+                <form action="#" method="post">
+                    <input
+          class="text-input contact-input"
+                        type="email"
+                        name="email"
+                        placeholder="email@example.com"
+                    />
+
+                    <button type="submit" name="button" class="btn btn-big">
+                        Subscribe
+                    </button>
+                </form>
+
+		</div>
+        </div>
+        <!-- copyright pertama -->
+        <div class="copyright">
+            <p>Copyright - Kelompok 5</p>
+
+        </div>
+  <br><br><br>
+    </div>
+
+    <script>
+        document.getElementById("accountform").onsubmit = function() {logAccount()};
+
+        function logAccount() {
+            alert("Logging In");
+        }
+    </script>
+</body>
+</body>
+</html>
